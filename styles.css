@@ -49,12 +49,12 @@ button, input, textarea, select { font: inherit; }
 .pane-link em { display:block; margin-top:4px; color:rgba(255,255,255,.82); font-size:.46rem; font-style:normal; font-weight:700; letter-spacing:.1em; text-transform:uppercase; opacity:.86; transition:opacity .35s ease, transform .35s ease; }
 .pane-link:hover .pane-link__number,.pane-link:hover strong,.pane-link:hover em,.pane-link:focus-visible .pane-link__number,.pane-link:focus-visible strong,.pane-link:focus-visible em { opacity:1; transform:translateY(-1px); }
 
-/* Same tile size; moved slightly upward from the previous pass */
-.pane-link--booking { left:44.45%; top:20.15%; width:11.45%; height:8.05%; }
-.pane-link--sessions { left:31.35%; top:29.65%; width:8.45%; height:12.05%; }
-.pane-link--gallery { right:31.2%; top:29.65%; width:8.45%; height:12.05%; }
-.pane-link--about { left:31.15%; top:42.55%; width:8.55%; height:8.1%; }
-.pane-link--contact { right:31.05%; top:42.55%; width:8.55%; height:8.1%; }
+/* Large downward correction while preserving tile dimensions */
+.pane-link--booking { left:44.45%; top:24.4%; width:11.45%; height:8.05%; }
+.pane-link--sessions { left:31.35%; top:33.9%; width:8.45%; height:12.05%; }
+.pane-link--gallery { right:31.2%; top:33.9%; width:8.45%; height:12.05%; }
+.pane-link--about { left:31.15%; top:46.8%; width:8.55%; height:8.1%; }
+.pane-link--contact { right:31.05%; top:46.8%; width:8.55%; height:8.1%; }
 .home-stage__hint { display:none !important; }
 .mobile-menu-button,.mobile-home-menu { display:none; }
 
@@ -131,11 +131,11 @@ button, input, textarea, select { font: inherit; }
 .detail-list li { padding:14px 16px; border-left:3px solid var(--brass); background:rgba(255,255,255,.56); color:#596456; line-height:1.6; }
 
 @media (max-width:980px) {
-  .pane-link--booking { left:43.25%; top:20.7%; width:13.5%; height:8.2%; }
-  .pane-link--sessions { left:27.4%; top:30.95%; width:10.3%; height:12.25%; }
-  .pane-link--gallery { right:27.2%; top:30.95%; width:10.3%; height:12.25%; }
-  .pane-link--about { left:27.2%; top:44.15%; width:10.55%; height:8.15%; }
-  .pane-link--contact { right:27%; top:44.15%; width:10.55%; height:8.15%; }
+  .pane-link--booking { left:43.25%; top:24.95%; width:13.5%; height:8.2%; }
+  .pane-link--sessions { left:27.4%; top:35.2%; width:10.3%; height:12.25%; }
+  .pane-link--gallery { right:27.2%; top:35.2%; width:10.3%; height:12.25%; }
+  .pane-link--about { left:27.2%; top:48.4%; width:10.55%; height:8.15%; }
+  .pane-link--contact { right:27%; top:48.4%; width:10.55%; height:8.15%; }
   .site-header__inner { align-items:center; }
   .site-nav-toggle { display:inline-flex; align-items:center; justify-content:center; min-width:46px; min-height:42px; color:var(--cream-soft); border:1px solid rgba(255,255,255,.2); background:transparent; cursor:pointer; }
   .site-nav { position:absolute; top:100%; left:0; right:0; display:none; grid-template-columns:1fr; width:100%; border-left:0; border-right:0; background:rgba(24,40,29,.98); }
