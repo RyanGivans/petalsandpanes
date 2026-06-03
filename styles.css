@@ -982,5 +982,89 @@ select {
     font-size: 2.9rem;
   }
 }
+/* ===== HOMEPAGE REFINEMENT OVERRIDES ===== */
+
+.home-stage__brand {
+  display: none !important;
+}
+
+.home-stage__signature {
+  position: absolute;
+  left: 4vw;
+  bottom: 4vh;
+  z-index: 6;
+  color: #fffaf1;
+  text-shadow: 0 4px 20px rgba(13, 23, 16, 0.55);
+}
+
+.home-stage__signature-title {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: .9;
+}
+
+.home-stage__signature-title span {
+  color: #e0c99a;
+}
+
+.home-stage__signature-subtitle {
+  margin: 8px 0 0;
+  font-size: 1.15rem;
+}
+
+.home-stage__signature-location {
+  margin: 6px 0 0;
+  font-size: .65rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+.pane-link {
+  background: rgba(255,255,255,.03) !important;
+  backdrop-filter: blur(.5px);
+}
+
+.pane-link strong {
+  font-size: 1.2rem;
+}
+
+/* Realigned panes */
+
+.pane-link--about {
+  left: 31%;
+  top: 46%;
+  width: 7.2%;
+  height: 11%;
+}
+
+.pane-link--sessions {
+  left: 41%;
+  top: 45%;
+  width: 7.3%;
+  height: 11%;
+}
+
+.pane-link--gallery {
+  right: 31%;
+  top: 46%;
+  width: 7.2%;
+  height: 11%;
+}
+
+.pane-link--booking {
+  left: 43%;
+  top: 65%;
+  width: 5.8%;
+  height: 10%;
+}
+
+.pane-link--contact {
+  right: 43%;
+  top: 65%;
+  width: 5.8%;
+  height: 10%;
+}
 
 /* ===== PART 3 END ===== */
