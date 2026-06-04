@@ -102,13 +102,7 @@
   position: relative;
   overflow: hidden;
   padding: 124px 20px 138px;
-  background:
-    linear-gradient(
-      180deg,
-      #f7f2e8 0%,
-      #f4efdf 28%,
-      #ece6d5 100%
-    );
+  background: #f7f2e8;
 }
 
 .about-story-stage::before,
@@ -179,12 +173,7 @@
   min-height: 560px;
   padding: 38px;
   border: 1px solid rgba(122, 102, 70, 0.15);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 253, 248, 0.96),
-      rgba(233, 224, 205, 0.94)
-    );
+  background: #f8f2e7;
   box-shadow: 0 28px 70px rgba(88, 76, 56, 0.18);
 }
 
@@ -266,7 +255,7 @@
   width: 94px;
   height: 16px;
   border-radius: 16px;
-  background: linear-gradient(90deg, #796546, #baa16e);
+  background: #8e734d;
   transform: rotate(-24deg);
   box-shadow: 0 6px 12px rgba(78, 62, 43, 0.16);
 }
@@ -312,23 +301,15 @@
 
 /* ===== PART 1 END ===== */
 
-/* ===== PART 2 START: SOIL GRADIENT + ROOTS + CINEMATIC SECTION + CTA ===== */
+/* ===== PART 2 START: SOLID EDITORIAL SECTIONS + ROOTS + CINEMATIC SECTION + CTA ===== */
 
 .about-soil-transition {
   position: relative;
   overflow: hidden;
   padding: 60px 20px 70px;
-  color: #f7f0e3;
+  color: #364233;
   text-align: center;
-  background:
-    linear-gradient(
-      180deg,
-      #ece6d5 0%,
-      #dce4d1 18%,
-      #bcc8aa 45%,
-      #8f9676 70%,
-      #596149 100%
-    );
+  background: #dce4d1;
 }
 
 .about-soil-transition::after {
@@ -338,12 +319,12 @@
   bottom: -1px;
   left: 0;
   height: 84px;
-  opacity: 0.28;
+  opacity: 0.18;
   background:
-    radial-gradient(ellipse at 14% 88%, #4a4f3d 0 32%, transparent 33%),
-    radial-gradient(ellipse at 38% 82%, #434936 0 34%, transparent 35%),
-    radial-gradient(ellipse at 62% 86%, #4b503d 0 36%, transparent 37%),
-    radial-gradient(ellipse at 86% 84%, #414633 0 34%, transparent 35%);
+    radial-gradient(ellipse at 14% 88%, #b8c4ab 0 32%, transparent 33%),
+    radial-gradient(ellipse at 38% 82%, #aebaa1 0 34%, transparent 35%),
+    radial-gradient(ellipse at 62% 86%, #b8c4ab 0 36%, transparent 37%),
+    radial-gradient(ellipse at 86% 84%, #aebaa1 0 34%, transparent 35%);
 }
 
 .about-soil-transition__inner {
@@ -364,7 +345,7 @@
 .about-soil-transition p {
   max-width: 660px;
   margin: 18px auto 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: #5d6a58;
   line-height: 1.78;
 }
 
@@ -373,23 +354,14 @@
   overflow: hidden;
   padding: 122px 20px 150px;
   color: #f3ecdc;
-  background:
-    linear-gradient(
-      180deg,
-      #596149 0%,
-      #4c5540 16%,
-      #3f4737 38%,
-      #344033 58%,
-      #2a342b 78%,
-      #273229 100%
-    );
+  background: #2f3a31;
 }
 
 .about-roots-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.18;
+  opacity: 0.14;
   background:
     radial-gradient(circle at 18% 30%, rgba(232, 220, 186, 0.24), transparent 22%),
     radial-gradient(circle at 82% 44%, rgba(194, 208, 169, 0.18), transparent 26%);
@@ -435,15 +407,8 @@
   right: 4%;
   left: 4%;
   height: 2px;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #b7a173 8%,
-      #b7a173 92%,
-      transparent
-    );
-  box-shadow: 0 0 16px rgba(211, 185, 128, 0.28);
+  background: #b7a173;
+  box-shadow: 0 0 16px rgba(211, 185, 128, 0.2);
 }
 
 .about-root-map::after {
@@ -452,8 +417,9 @@
   top: 58px;
   left: 50%;
   width: 2px;
-  height: 164px;
-  background: linear-gradient(180deg, #b7a173, rgba(183, 161, 115, 0));
+  height: 184px;
+  background: #b7a173;
+  opacity: 0.68;
 }
 
 .about-root-node {
@@ -504,10 +470,10 @@
 
 .about-root-branches {
   position: relative;
-  width: min(720px, 100%);
-  height: 170px;
-  margin: 20px auto 0;
-  opacity: 0.58;
+  width: min(820px, 100%);
+  height: 210px;
+  margin: 28px auto 0;
+  opacity: 0.68;
 }
 
 .about-root-branches span {
@@ -515,33 +481,67 @@
   top: 0;
   left: 50%;
   width: 2px;
-  height: 156px;
-  background: linear-gradient(180deg, #b7a173, transparent);
+  height: 184px;
+  border-radius: 999px;
+  background: #cdb885;
   transform-origin: top center;
+  filter: drop-shadow(0 0 6px rgba(207, 186, 137, 0.12));
+}
+
+.about-root-branches span:nth-child(1) {
+  height: 194px;
+  transform: rotate(0deg);
 }
 
 .about-root-branches span:nth-child(2) {
-  transform: rotate(18deg);
+  height: 184px;
+  transform: rotate(14deg);
 }
 
 .about-root-branches span:nth-child(3) {
-  transform: rotate(-18deg);
+  height: 184px;
+  transform: rotate(-14deg);
 }
 
 .about-root-branches span:nth-child(4) {
-  transform: rotate(34deg);
+  height: 172px;
+  transform: rotate(28deg);
 }
 
 .about-root-branches span:nth-child(5) {
-  transform: rotate(-34deg);
+  height: 172px;
+  transform: rotate(-28deg);
 }
 
 .about-root-branches span:nth-child(6) {
-  transform: rotate(52deg);
+  height: 158px;
+  transform: rotate(44deg);
 }
 
 .about-root-branches span:nth-child(7) {
-  transform: rotate(-52deg);
+  height: 158px;
+  transform: rotate(-44deg);
+}
+
+.about-root-branches::before,
+.about-root-branches::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  width: 290px;
+  height: 150px;
+  border-bottom: 2px solid rgba(205, 184, 133, 0.3);
+  border-radius: 0 0 90% 90%;
+  transform-origin: left top;
+}
+
+.about-root-branches::before {
+  transform: rotate(17deg);
+}
+
+.about-root-branches::after {
+  transform: scaleX(-1) rotate(17deg);
 }
 
 .about-purpose-cinematic {
@@ -601,15 +601,8 @@
 .about-founder-note {
   position: relative;
   overflow: hidden;
-  padding: 132px 20px 142px;
-  background:
-    linear-gradient(
-      180deg,
-      #273229 0%,
-      #4f5b47 22%,
-      #c2c9b3 54%,
-      #ebe4d3 100%
-    );
+  padding: 138px 20px 154px;
+  background: #f1ebdf;
 }
 
 .about-founder-note__card {
@@ -617,12 +610,7 @@
   width: min(920px, 100%);
   margin: 0 auto;
   padding: 54px 60px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 252, 245, 0.96),
-      rgba(239, 229, 209, 0.96)
-    );
+  background: #fffaf1;
   box-shadow: 0 28px 68px rgba(73, 65, 48, 0.18);
 }
 
@@ -661,38 +649,35 @@
 .about-growth-cta {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   padding: 118px 20px 126px;
   text-align: center;
-  background:
-    linear-gradient(
-      180deg,
-      #ebe4d3 0%,
-      #f6f0e4 52%,
-      #fbf8f1 100%
-    );
+  background: #fbf8f1;
 }
 
 .about-growth-cta::before,
 .about-growth-cta::after {
   content: "";
   position: absolute;
-  bottom: -44px;
-  width: 260px;
-  height: 300px;
-  opacity: 0.36;
+  bottom: -58px;
+  width: 330px;
+  height: 360px;
+  opacity: 0.42;
   background:
-    radial-gradient(ellipse at 40% 18%, #7f8d72 0 10%, transparent 11%),
-    radial-gradient(ellipse at 65% 38%, #9aa785 0 12%, transparent 13%),
-    radial-gradient(ellipse at 42% 60%, #7d8a70 0 13%, transparent 14%),
-    radial-gradient(ellipse at 70% 78%, #a8b294 0 12%, transparent 13%);
+    radial-gradient(ellipse at 26% 18%, #7f8d72 0 9%, transparent 10%),
+    radial-gradient(ellipse at 54% 24%, #97a483 0 10%, transparent 11%),
+    radial-gradient(ellipse at 72% 42%, #849274 0 11%, transparent 12%),
+    radial-gradient(ellipse at 42% 52%, #a6b092 0 12%, transparent 13%),
+    radial-gradient(ellipse at 66% 70%, #7d8a70 0 12%, transparent 13%),
+    radial-gradient(ellipse at 36% 82%, #a8b294 0 11%, transparent 12%);
 }
 
 .about-growth-cta::before {
-  left: -20px;
+  left: -36px;
 }
 
 .about-growth-cta::after {
-  right: -20px;
+  right: -36px;
   transform: scaleX(-1);
 }
 
@@ -727,6 +712,33 @@
   justify-content: center;
   gap: 12px;
   margin-top: 28px;
+}
+
+.about-growth-panel::before,
+.about-growth-panel::after {
+  content: "";
+  position: absolute;
+  top: -56px;
+  width: 92px;
+  height: 126px;
+  opacity: 0.42;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, #b69268 0 7%, transparent 8%),
+    radial-gradient(ellipse at 50% 18%, #e8d4c5 0 14%, transparent 15%),
+    radial-gradient(ellipse at 82% 50%, #f0d9c9 0 14%, transparent 15%),
+    radial-gradient(ellipse at 50% 82%, #ead7cb 0 14%, transparent 15%),
+    radial-gradient(ellipse at 18% 50%, #f3ddd0 0 14%, transparent 15%);
+}
+
+.about-growth-panel::before {
+  left: -130px;
+  transform: rotate(-12deg);
+}
+
+.about-growth-panel::after {
+  right: -130px;
+  transform: rotate(12deg);
 }
 
 @media (max-width: 980px) {
@@ -818,6 +830,10 @@
     font-size: clamp(3rem, 14vw, 4.8rem);
   }
 
+  .about-founder-note {
+    padding: 104px 14px 116px;
+  }
+
   .about-founder-note__card {
     padding: 38px 22px;
   }
@@ -825,169 +841,11 @@
   .about-growth-actions {
     flex-direction: column;
   }
-}
-
-/* ===== REFINEMENT PASS: ORGANIC ROOTS + FOUNDER SPACING + FINAL BOTANICAL CTA ===== */
-
-.about-root-map::after {
-  height: 184px;
-}
-
-.about-root-branches {
-  position: relative;
-  width: min(820px, 100%);
-  height: 210px;
-  margin: 28px auto 0;
-  opacity: 0.68;
-}
-
-.about-root-branches span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 184px;
-  border-radius: 999px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(205, 184, 133, 0.78),
-      rgba(205, 184, 133, 0.2) 72%,
-      transparent
-    );
-  transform-origin: top center;
-  filter: drop-shadow(0 0 6px rgba(207, 186, 137, 0.12));
-}
-
-.about-root-branches span:nth-child(1) {
-  height: 194px;
-  transform: rotate(0deg);
-}
-
-.about-root-branches span:nth-child(2) {
-  height: 184px;
-  transform: rotate(14deg);
-}
-
-.about-root-branches span:nth-child(3) {
-  height: 184px;
-  transform: rotate(-14deg);
-}
-
-.about-root-branches span:nth-child(4) {
-  height: 172px;
-  transform: rotate(28deg);
-}
-
-.about-root-branches span:nth-child(5) {
-  height: 172px;
-  transform: rotate(-28deg);
-}
-
-.about-root-branches span:nth-child(6) {
-  height: 158px;
-  transform: rotate(44deg);
-}
-
-.about-root-branches span:nth-child(7) {
-  height: 158px;
-  transform: rotate(-44deg);
-}
-
-.about-root-branches::before,
-.about-root-branches::after {
-  content: "";
-  position: absolute;
-  top: 34px;
-  left: 50%;
-  width: 290px;
-  height: 150px;
-  border-bottom: 2px solid rgba(205, 184, 133, 0.3);
-  border-radius: 0 0 90% 90%;
-  transform-origin: left top;
-}
-
-.about-root-branches::before {
-  transform: rotate(17deg);
-}
-
-.about-root-branches::after {
-  transform: scaleX(-1) rotate(17deg);
-}
-
-.about-founder-note {
-  padding: 138px 20px 154px;
-}
-
-.about-founder-note__card {
-  margin: 0 auto;
-}
-
-.about-growth-cta {
-  isolation: isolate;
-}
-
-.about-growth-cta::before,
-.about-growth-cta::after {
-  width: 330px;
-  height: 360px;
-  bottom: -58px;
-  opacity: 0.42;
-  background:
-    radial-gradient(ellipse at 26% 18%, #7f8d72 0 9%, transparent 10%),
-    radial-gradient(ellipse at 54% 24%, #97a483 0 10%, transparent 11%),
-    radial-gradient(ellipse at 72% 42%, #849274 0 11%, transparent 12%),
-    radial-gradient(ellipse at 42% 52%, #a6b092 0 12%, transparent 13%),
-    radial-gradient(ellipse at 66% 70%, #7d8a70 0 12%, transparent 13%),
-    radial-gradient(ellipse at 36% 82%, #a8b294 0 11%, transparent 12%);
-}
-
-.about-growth-cta::before {
-  left: -36px;
-}
-
-.about-growth-cta::after {
-  right: -36px;
-}
-
-.about-growth-panel::before,
-.about-growth-panel::after {
-  content: "";
-  position: absolute;
-  top: -56px;
-  width: 92px;
-  height: 126px;
-  opacity: 0.42;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 50% 50%, #b69268 0 7%, transparent 8%),
-    radial-gradient(ellipse at 50% 18%, #e8d4c5 0 14%, transparent 15%),
-    radial-gradient(ellipse at 82% 50%, #f0d9c9 0 14%, transparent 15%),
-    radial-gradient(ellipse at 50% 82%, #ead7cb 0 14%, transparent 15%),
-    radial-gradient(ellipse at 18% 50%, #f3ddd0 0 14%, transparent 15%);
-}
-
-.about-growth-panel::before {
-  left: -130px;
-  transform: rotate(-12deg);
-}
-
-.about-growth-panel::after {
-  right: -130px;
-  transform: rotate(12deg);
-}
-
-@media (max-width: 720px) {
-  .about-founder-note {
-    padding: 104px 14px 116px;
-  }
 
   .about-growth-panel::before,
   .about-growth-panel::after {
     display: none;
   }
 }
-
-/* ===== REFINEMENT PASS END ===== */
 
 /* ===== PART 2 END ===== */
