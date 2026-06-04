@@ -1,1 +1,302 @@
+<!-- ===== PART 1 START: CONTACT PAGE ===== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Contact Petals and Panes to ask a question, plan a session, or reserve the vintage garden glasshouse in Huntsville, Arkansas."
+  />
+  <title>Contact | Petals &amp; Panes</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/petalsandpanes/css/base.css" />
+  <link rel="stylesheet" href="/petalsandpanes/css/shared-pages.css" />
+  <link rel="stylesheet" href="/petalsandpanes/css/contact.css" />
+</head>
+
+<body class="site-page contact-page">
+  <div data-shared-nav></div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="contact-hero">
+      <img
+        class="contact-hero__image"
+        src="/petalsandpanes/gallery/about-hero.png"
+        alt="Sunlit vintage garden glasshouse interior"
+      />
+
+      <div class="contact-hero__overlay"></div>
+
+      <div class="contact-hero__content">
+        <p class="section-eyebrow">Contact Petals &amp; Panes</p>
+
+        <h1>
+          Tell us about
+          <span>the story you want to create.</span>
+        </h1>
+
+        <p>
+          Ask a question, check availability, or start planning a portrait
+          session, seasonal setup, or creative project in the glasshouse and
+          garden.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT OPTIONS + INQUIRY FORM ===== -->
+    <section class="contact-main">
+      <div class="contact-main__inner">
+        <div class="contact-intro">
+          <p class="section-eyebrow">Start the conversation</p>
+
+          <h2>
+            Choose the easiest way to reach us.
+          </h2>
+
+          <p>
+            Petals &amp; Panes is located in Huntsville, Arkansas and serves
+            photographers, families, couples, seniors, creators, and clients
+            throughout Northwest Arkansas.
+          </p>
+
+          <p>
+            Send a detailed inquiry through the form, start a quick Facebook
+            Messenger conversation, or reach out by email. Use whichever option
+            feels easiest for you.
+          </p>
+
+          <div class="contact-details">
+            <article class="contact-detail">
+              <span>Facebook Messenger</span>
+              <a
+                href="https://m.me/61586174127701"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Message Petals &amp; Panes
+              </a>
+            </article>
+
+            <article class="contact-detail">
+              <span>Email</span>
+              <a
+                href="mailto:hello@petalsandpanes.com?subject=Petals%20%26%20Panes%20Inquiry"
+              >
+                hello@petalsandpanes.com
+              </a>
+            </article>
+
+            <article class="contact-detail">
+              <span>Location</span>
+              <strong>Huntsville, Arkansas</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <p class="section-eyebrow">Inquiry form</p>
+
+          <h2>
+            Let’s plan something beautiful.
+          </h2>
+
+          <p>
+            Share a few details below. When you click send, your email app will
+            open with the inquiry prepared for you.
+          </p>
+
+          <form id="contact-inquiry-form">
+            <div class="contact-form-grid">
+              <div class="contact-field">
+                <label for="contact-name">Your Name</label>
+                <input id="contact-name" name="name" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="contact-field">
+                <label for="contact-email">Your Email</label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="contact-field">
+                <label for="contact-phone">Phone Number</label>
+                <input id="contact-phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+
+              <div class="contact-field">
+                <label for="contact-type">What are you planning?</label>
+                <select id="contact-type" name="type">
+                  <option value="Portrait Session">Portrait Session</option>
+                  <option value="Family Session">Family Session</option>
+                  <option value="Senior Session">Senior Session</option>
+                  <option value="Couples Session">Couples Session</option>
+                  <option value="Branding Session">Branding Session</option>
+                  <option value="Mini Sessions">Mini Sessions</option>
+                  <option value="Creative Project">Creative Project</option>
+                  <option value="General Question">General Question</option>
+                </select>
+              </div>
+
+              <div class="contact-field contact-field--full">
+                <label for="contact-date">Preferred Date or Timeframe</label>
+                <input id="contact-date" name="date" type="text" placeholder="Example: Saturday afternoon or sometime in October" />
+              </div>
+
+              <div class="contact-field contact-field--full">
+                <label for="contact-message">Tell us more</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  placeholder="Share your ideas, the type of session, number of people, or anything else that would help us point you in the right direction."
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="contact-form-actions">
+              <button class="btn btn--dark" type="submit">
+                Send Inquiry by Email
+              </button>
+
+              <a
+                class="btn btn--light"
+                href="https://m.me/61586174127701"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Message on Facebook
+              </a>
+            </div>
+
+            <p class="contact-note">
+              The form opens your email app so you can review the message before
+              sending it. You can also message us directly on Facebook for a
+              quicker conversation.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VISIT SECTION ===== -->
+    <section class="contact-visit">
+      <div class="contact-visit__inner">
+        <div>
+          <p class="section-eyebrow">Visit the glasshouse</p>
+
+          <h2>
+            A quiet garden setting in Huntsville.
+          </h2>
+
+          <p>
+            Petals &amp; Panes is a vintage garden glasshouse created for natural
+            light, meaningful photographs, and creative sessions with a sense of
+            place.
+          </p>
+
+          <p>
+            Reach out before visiting so we can help you plan the right time and
+            make sure the space is ready for your session.
+          </p>
+
+          <a class="btn btn--dark" href="/petalsandpanes/booking/">
+            View Booking Details
+          </a>
+        </div>
+
+        <figure class="contact-visit__image">
+          <img
+            src="/petalsandpanes/gallery/arch.png"
+            alt="Flower-covered garden archway at Petals and Panes"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="contact-final">
+      <img
+        class="contact-final__image"
+        src="/petalsandpanes/gallery/sunflowers.png"
+        alt="Vintage glasshouse surrounded by flowers"
+      />
+
+      <div class="contact-final__overlay"></div>
+
+      <div class="contact-final__panel">
+        <p class="section-eyebrow">Ready when you are</p>
+
+        <h2>
+          Start with a question. Leave with a plan.
+        </h2>
+
+        <p>
+          Send a message today and let’s find the best way to bring your next
+          session, seasonal setup, or creative idea to life.
+        </p>
+
+        <div class="contact-final__actions">
+          <a
+            class="btn btn--light"
+            href="https://m.me/61586174127701"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Message on Facebook
+          </a>
+
+          <a
+            class="btn btn--dark"
+            href="mailto:hello@petalsandpanes.com?subject=Petals%20%26%20Panes%20Inquiry"
+          >
+            Send an Email
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-shared-footer></div>
+
+  <script src="/petalsandpanes/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contact-inquiry-form");
+
+      if (!form) return;
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("contact-name").value.trim();
+        const email = document.getElementById("contact-email").value.trim();
+        const phone = document.getElementById("contact-phone").value.trim();
+        const type = document.getElementById("contact-type").value;
+        const date = document.getElementById("contact-date").value.trim();
+        const message = document.getElementById("contact-message").value.trim();
+
+        const subject = encodeURIComponent("Petals & Panes Inquiry - " + type);
+        const body = encodeURIComponent(
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Phone: " + (phone || "Not provided") + "\n" +
+          "Inquiry Type: " + type + "\n" +
+          "Preferred Date or Timeframe: " + (date || "Not provided") + "\n\n" +
+          "Message:\n" + message
+        );
+
+        window.location.href = "mailto:hello@petalsandpanes.com?subject=" + subject + "&body=" + body;
+      });
+    });
+  </script>
+</body>
+</html>
+<!-- ===== PART 1 END ===== -->
