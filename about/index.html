@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Learn the story behind Petals and Panes, a vintage garden glasshouse photography location in Huntsville, Arkansas."
+    content="Discover the story behind Petals and Panes, a vintage garden glasshouse photography location in Huntsville, Arkansas."
   />
-  <title>About | Petals & Panes</title>
+  <title>About | Petals &amp; Panes</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,47 +17,36 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="/petalsandpanes/styles.css" />
+  <link rel="stylesheet" href="/petalsandpanes/css/base.css" />
+  <link rel="stylesheet" href="/petalsandpanes/css/shared-pages.css" />
+  <link rel="stylesheet" href="/petalsandpanes/css/about.css" />
 </head>
 
 <body class="site-page about-page">
   <div data-shared-nav></div>
 
   <main>
-    <!-- ===== ABOUT HERO START: LOOKING INTO THE GLASSHOUSE ===== -->
-    <section class="about-glasshouse-view">
+    <!-- ===== HERO: ENTER THE GLASSHOUSE ===== -->
+    <section class="about-botanical-hero">
       <img
-        class="about-glasshouse-view__interior"
-        src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=2400&q=90"
-        alt="Lush garden glasshouse interior filled with plants and flowers"
+        class="about-botanical-hero__image"
+        src="/petalsandpanes/gallery/about-hero.png"
+        alt="Sunlit vintage glasshouse interior filled with flowers, greenery, and wicker seating"
       />
 
-      <div class="about-glasshouse-view__shade"></div>
-      <div class="about-glasshouse-view__mist"></div>
+      <div class="about-botanical-hero__overlay"></div>
 
-      <div class="about-glasshouse-view__foliage about-glasshouse-view__foliage--left"></div>
-      <div class="about-glasshouse-view__foliage about-glasshouse-view__foliage--right"></div>
-
-      <div class="about-glasshouse-frame">
-        <div class="about-glasshouse-frame__vertical about-glasshouse-frame__vertical--left"></div>
-        <div class="about-glasshouse-frame__vertical about-glasshouse-frame__vertical--center"></div>
-        <div class="about-glasshouse-frame__vertical about-glasshouse-frame__vertical--right"></div>
-
-        <div class="about-glasshouse-frame__horizontal about-glasshouse-frame__horizontal--top"></div>
-        <div class="about-glasshouse-frame__horizontal about-glasshouse-frame__horizontal--middle"></div>
-      </div>
-
-      <div class="about-glasshouse-view__content">
+      <div class="about-botanical-hero__content">
         <p class="section-eyebrow">Inside Petals &amp; Panes</p>
 
         <h1>
-          Every pane holds
-          <span>a little history.</span>
+          The Story
+          <span>Behind the Glass</span>
         </h1>
 
         <p>
-          A vintage garden glasshouse created for storytelling, connection,
-          and photographs filled with natural light.
+          A vintage garden glasshouse rooted in Huntsville history and created
+          for memories worth keeping.
         </p>
 
         <a class="btn btn--light" href="#door-story">
@@ -65,139 +54,159 @@
         </a>
       </div>
 
-      <div class="about-memory-table">
-        <div class="about-memory-table__surface"></div>
+      <div class="about-scroll-note">Scroll to step inside</div>
+    </section>
 
-        <figure class="about-memory-table__photo">
-          <img
-            src="/petalsandpanes/gallery/bessies-inn.png"
-            alt="Historic Bessie's Inn in Huntsville, Arkansas"
-          />
-
-          <figcaption>
-            Bessie’s Inn<br />
-            <span>Huntsville, Arkansas</span>
-          </figcaption>
-        </figure>
-
-        <article class="about-memory-table__note">
-          <p class="about-memory-table__label">The story behind the doors</p>
+    <!-- ===== STORY: THE DOORS ===== -->
+    <section class="about-story-stage" id="door-story">
+      <div class="about-story-stage__inner">
+        <div class="about-story-copy">
+          <p class="section-eyebrow">The doors that started it all</p>
 
           <h2>
-            A piece of Huntsville history found a new home.
+            A beautiful piece of Huntsville history found a new home.
           </h2>
 
           <p>
-            The vintage French doors inside Petals &amp; Panes originally came
-            from Bessie’s Inn, where they had been part of the building since the
-            early 1900s.
-          </p>
-
-          <a href="#door-story">Read the full story</a>
-        </article>
-
-        <div class="about-memory-table__flowers" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-
-      <div class="about-glasshouse-view__scroll">
-        <span></span>
-        Scroll to step inside
-      </div>
-    </section>
-    <!-- ===== ABOUT HERO END ===== -->
-
-    <section class="section about-intro" id="door-story">
-      <div class="split-layout">
-        <div>
-          <p class="section-eyebrow">A second life for something beautiful</p>
-
-          <h2 class="section-title">
-            The doors already had a story.
-          </h2>
-
-          <p class="section-copy">
             One of our favorite parts of Petals &amp; Panes is the story behind
             these doors.
           </p>
 
-          <p class="section-copy">
+          <p>
             When we were searching for vintage French doors for the greenhouse,
             our friend Azalea sent us a picture of some old doors she had in
             storage and told us we were welcome to have them.
           </p>
 
-          <p class="section-copy">
+          <p>
             We already loved them the moment we saw the picture. But when we
             went to pick them up, we found out they were originally from
             Bessie’s Inn here in Huntsville.
           </p>
 
-          <p class="section-copy">
-            That made them even more special.
-          </p>
-        </div>
-
-        <figure class="about-story-image">
-          <img
-            src="/petalsandpanes/gallery/bessies-inn.png"
-            alt="Historic Bessie's Inn in Huntsville, Arkansas"
-          />
-
-          <figcaption>
-            <span>Bessie’s Inn — Huntsville, Arkansas</span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="about-history">
-      <div class="section about-history__inner">
-        <div class="about-history__card">
-          <p class="section-eyebrow">Huntsville, Arkansas</p>
-
-          <h2>
-            From Bessie’s Inn<br />
-            to Petals &amp; Panes
-          </h2>
-
           <p>
             These beautiful old doors had been removed during renovations, but
             instead of being forgotten, they found a new home here at Petals
-            &amp; Panes.
-          </p>
-
-          <p>
-            Knowing they have been part of Huntsville history since the early
-            1900s makes them even more meaningful to us.
+            &amp; Panes. Knowing they have been part of Huntsville history since
+            the early 1900s makes them even more meaningful to us.
           </p>
         </div>
 
-        <div class="about-history__detail">
-          <span>Early 1900s</span>
-          <strong>
-            A quiet connection between the past and the photographs still to
-            come.
-          </strong>
+        <div class="about-artifact-board" aria-label="Bessie's Inn historical display">
+          <div class="about-artifact-flower" aria-hidden="true"></div>
+          <div class="about-artifact-key" aria-hidden="true"></div>
+
+          <figure class="about-artifact-photo">
+            <img
+              src="/petalsandpanes/gallery/bessies-inn.png"
+              alt="Historic Bessie's Inn in Huntsville, Arkansas"
+            />
+
+            <figcaption>
+              Bessie’s Inn<br />
+              <span>Huntsville, Arkansas</span>
+            </figcaption>
+          </figure>
+
+          <aside class="about-artifact-note">
+            <p>
+              These doors were never meant to be forgotten. They were waiting
+              for a place where their story could continue.
+            </p>
+            <strong>Petals &amp; Panes</strong>
+          </aside>
         </div>
       </div>
     </section>
 
+    <!-- ===== TRANSITION: DOWN TO THE ROOTS ===== -->
+    <section class="about-soil-transition">
+      <div class="about-soil-transition__inner">
+        <p class="section-eyebrow">A story that took root</p>
+
+        <h2>
+          Every beautiful space begins somewhere deeper.
+        </h2>
+
+        <p>
+          As you move through the story of Petals &amp; Panes, the surface gives
+          way to something more grounded: a place shaped by history, generosity,
+          and new beginnings.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== ROOT TIMELINE ===== -->
+    <section class="about-roots-section">
+      <div class="about-roots-section__inner">
+        <header class="about-roots-intro">
+          <p class="section-eyebrow">Rooted in Huntsville</p>
+
+          <h2>
+            A story that keeps growing.
+          </h2>
+
+          <p>
+            From the early days of Bessie’s Inn to every new photograph made
+            here today, each chapter adds another layer to the story.
+          </p>
+        </header>
+
+        <div class="about-root-map" aria-label="Petals and Panes historical timeline">
+          <article class="about-root-node">
+            <h3>Early 1900s</h3>
+            <p>Bessie’s Inn becomes part of Huntsville history.</p>
+          </article>
+
+          <article class="about-root-node">
+            <h3>Renovations</h3>
+            <p>The vintage French doors are removed during renovations.</p>
+          </article>
+
+          <article class="about-root-node">
+            <h3>Preserved</h3>
+            <p>Instead of being forgotten, the doors are carefully saved.</p>
+          </article>
+
+          <article class="about-root-node">
+            <h3>A Gift</h3>
+            <p>Azalea offers the doors a chance to begin another chapter.</p>
+          </article>
+
+          <article class="about-root-node">
+            <h3>A New Home</h3>
+            <p>The doors find new purpose inside Petals &amp; Panes.</p>
+          </article>
+
+          <article class="about-root-node">
+            <h3>New Stories</h3>
+            <p>Now they frame portraits, memories, and celebrations.</p>
+          </article>
+        </div>
+
+        <div class="about-root-branches" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PURPOSE: REAL PHOTOGRAPHY IMAGE ===== -->
     <section class="about-purpose-cinematic">
       <img
         class="about-purpose-cinematic__image"
         src="/petalsandpanes/gallery/petalpane1.jpg"
-        alt="Portrait session in the Petals and Panes garden glasshouse"
+        alt="Portrait session in the Petals and Panes garden space"
       />
 
       <div class="about-purpose-cinematic__overlay"></div>
 
-      <div class="about-purpose-cinematic__card">
+      <div class="about-purpose-card">
         <p class="section-eyebrow">More than a backdrop</p>
 
         <h2>
@@ -222,27 +231,27 @@
       </div>
     </section>
 
-    <section class="about-quote">
-      <div class="section about-quote__inner">
-        <p class="section-eyebrow">Petals &amp; Panes</p>
-
-        <blockquote>
-          “Instead of being forgotten, they found a new home.”
-        </blockquote>
-
+    <!-- ===== FOUNDER NOTE ===== -->
+    <section class="about-founder-note">
+      <div class="about-founder-note__card">
         <p>
-          A vintage garden glasshouse for portraits, stories, and photographs
-          that feel like they have always belonged here.
+          “I created this greenhouse and garden space to be more than just a
+          backdrop — a place for storytelling, connection, and preserving
+          beautiful memories in natural light.”
         </p>
+
+        <strong>A note from Petals &amp; Panes</strong>
       </div>
     </section>
 
-    <section class="section about-final">
-      <div class="about-final__panel">
-        <p class="section-eyebrow">Come see the space</p>
+    <!-- ===== FINAL CTA: BACK INTO THE LIGHT ===== -->
+    <section class="about-growth-cta">
+      <div class="about-growth-panel">
+        <p class="section-eyebrow">Petals &amp; Panes</p>
 
         <h2>
-          Create something beautiful inside the glasshouse.
+          Rooted in history.
+          <span>Made for new memories.</span>
         </h2>
 
         <p>
@@ -251,13 +260,13 @@
           Northwest Arkansas.
         </p>
 
-        <div class="about-final__actions">
-          <a class="btn btn--dark" href="/petalsandpanes/gallery/">
-            View the Gallery
+        <div class="about-growth-actions">
+          <a class="btn btn--dark" href="/petalsandpanes/booking/">
+            Reserve the Glasshouse
           </a>
 
-          <a class="btn btn--light about-final__secondary" href="/petalsandpanes/contact/">
-            Get in Touch
+          <a class="btn btn--light" href="/petalsandpanes/gallery/">
+            Explore the Gallery
           </a>
         </div>
       </div>
