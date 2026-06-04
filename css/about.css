@@ -98,6 +98,61 @@
   background: rgba(255, 255, 255, 0.52);
 }
 
+/* ===== ABOUT ARRIVAL HANDOFF START ===== */
+
+.is-about-arriving .site-header,
+.is-about-arriving .about-botanical-hero__content,
+.is-about-arriving .about-scroll-note {
+  opacity: 0;
+}
+
+.is-about-arriving .site-header {
+  transform: translateY(-14px);
+}
+
+.is-about-arriving .about-botanical-hero__content {
+  transform: translate3d(0, 18px, 0);
+}
+
+.is-about-arriving .about-scroll-note {
+  transform: translate3d(0, 10px, 0);
+}
+
+.is-about-arriving .about-botanical-hero__image {
+  transform: scale(1.075);
+}
+
+.is-about-arriving .about-botanical-hero__overlay {
+  opacity: 0.82;
+}
+
+.is-about-arriving .site-header,
+.is-about-arriving .about-botanical-hero__content,
+.is-about-arriving .about-scroll-note,
+.is-about-arriving .about-botanical-hero__image,
+.is-about-arriving .about-botanical-hero__overlay {
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.is-about-arrival-ready .site-header,
+.is-about-arrival-ready .about-botanical-hero__content,
+.is-about-arrival-ready .about-scroll-note {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.is-about-arrival-ready .about-botanical-hero__image {
+  transform: scale(1.025);
+}
+
+.is-about-arrival-ready .about-botanical-hero__overlay {
+  opacity: 1;
+}
+
+/* ===== ABOUT ARRIVAL HANDOFF END ===== */
+
 .about-story-stage {
   position: relative;
   overflow: hidden;
