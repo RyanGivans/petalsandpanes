@@ -51,13 +51,13 @@ function initializeHomepagePaneTransition() {
     stage.classList.add("is-zooming-through-pane", "is-zooming-to-about");
     document.body.classList.add("is-home-transitioning");
 
-    requestAnimationFrame(() => {
+    window.setTimeout(() => {
       reveal.classList.add("is-visible");
-    });
+    }, 820);
 
     window.setTimeout(() => {
       window.location.href = destination;
-    }, 1220);
+    }, 2380);
   });
 }
 
