@@ -7,10 +7,29 @@
 }
 
 .home-stage {
+  --zoom-x: 50%;
+  --zoom-y: 50%;
   position: relative;
   min-height: 100svh;
   overflow: hidden;
   isolation: isolate;
+}
+
+.home-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(
+      circle at var(--zoom-x) var(--zoom-y),
+      rgba(255, 247, 228, 0) 0 8%,
+      rgba(16, 25, 18, 0.2) 28%,
+      rgba(8, 14, 10, 0.78) 100%
+    );
+  transition: opacity 0.72s ease;
 }
 
 .home-stage__image {
@@ -21,6 +40,8 @@
   object-fit: cover;
   object-position: center center;
   animation: subtleZoom 24s ease-in-out infinite alternate;
+  transform-origin: var(--zoom-x) var(--zoom-y);
+  will-change: transform, filter;
 }
 
 .home-stage__overlay {
@@ -47,6 +68,7 @@
       transparent 72%,
       rgba(10, 18, 13, 0.16)
     );
+  transition: opacity 0.5s ease;
 }
 
 .home-stage__sunlight {
@@ -66,6 +88,7 @@
     );
   filter: blur(28px);
   animation: sunlightFloat 10s ease-in-out infinite alternate;
+  transition: opacity 0.5s ease;
 }
 
 .home-stage__brand {
@@ -81,6 +104,9 @@
   color: #fffaf1;
   text-align: left;
   text-shadow: 0 4px 20px rgba(13, 23, 16, 0.5);
+  transition:
+    opacity 0.42s ease,
+    transform 0.55s ease;
 }
 
 .home-stage__signature-title {
@@ -141,7 +167,8 @@
     color 0.35s ease,
     border-color 0.35s ease,
     background 0.35s ease,
-    box-shadow 0.35s ease;
+    box-shadow 0.35s ease,
+    opacity 0.38s ease;
 }
 
 .pane-link::before,
@@ -260,6 +287,41 @@
   display: none;
 }
 
+.home-stage.is-zooming-through-pane::after {
+  opacity: 1;
+}
+
+.home-stage.is-zooming-through-pane .home-stage__image {
+  animation: cameraPushIntoPane 0.86s cubic-bezier(0.2, 0.74, 0.2, 1) forwards;
+}
+
+.home-stage.is-zooming-through-pane .home-stage__overlay,
+.home-stage.is-zooming-through-pane .home-stage__sunlight,
+.home-stage.is-zooming-through-pane .home-stage__signature,
+.home-stage.is-zooming-through-pane .pane-link:not(.pane-link--about),
+.home-stage.is-zooming-through-pane .mobile-menu-button,
+.home-stage.is-zooming-through-pane .mobile-home-menu {
+  opacity: 0;
+}
+
+.home-stage.is-zooming-through-pane .home-stage__signature {
+  transform: translate3d(-12px, -8px, 0);
+}
+
+.home-stage.is-zooming-through-pane .pane-link--about {
+  z-index: 21;
+  border-color: rgba(255, 248, 227, 0.95);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 0 0 58px rgba(255, 255, 255, 0.22),
+    0 0 70px rgba(255, 228, 174, 0.48);
+  animation: paneDissolveIntoGlass 0.82s ease forwards;
+}
+
+.is-home-transitioning {
+  pointer-events: none;
+}
+
 @keyframes subtleZoom {
   from {
     transform: scale(1.01);
@@ -270,6 +332,40 @@
   }
 }
 
+@keyframes cameraPushIntoPane {
+  0% {
+    transform: scale(1.03);
+    filter: brightness(1) saturate(1);
+  }
+
+  58% {
+    transform: scale(2.65);
+    filter: brightness(1.03) saturate(1.04);
+  }
+
+  100% {
+    transform: scale(5.8);
+    filter: brightness(0.9) saturate(0.92) blur(1.4px);
+  }
+}
+
+@keyframes paneDissolveIntoGlass {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  46% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
 @keyframes sunlightFloat {
   from {
     transform: translate3d(-1vw, 0, 0) scale(0.96);
@@ -277,6 +373,15 @@
 
   to {
     transform: translate3d(2vw, 2vw, 0) scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-stage__image,
+  .home-stage__sunlight,
+  .home-stage.is-zooming-through-pane .home-stage__image,
+  .home-stage.is-zooming-through-pane .pane-link--about {
+    animation: none;
   }
 }
 
