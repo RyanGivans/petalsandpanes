@@ -1,10 +1,29 @@
 // ===== PART 1 START: SHARED SITE INTERACTIONS =====
 
 document.addEventListener("DOMContentLoaded", () => {
+  initializeArrivalHandoff();
   initializeMobileHomepageMenu();
   initializeHomepagePaneTransition();
   initializeSharedComponents();
 });
+
+function initializeArrivalHandoff() {
+  const params = new URLSearchParams(window.location.search);
+  const arrival = params.get("arrival");
+
+  if (arrival !== "about") return;
+
+  document.body.classList.add("is-about-arriving");
+
+  window.setTimeout(() => {
+    document.body.classList.add("is-about-arrival-ready");
+  }, 120);
+
+  window.setTimeout(() => {
+    const cleanUrl = window.location.pathname + window.location.hash;
+    window.history.replaceState({}, "", cleanUrl);
+  }, 1600);
+}
 
 function initializeMobileHomepageMenu() {
   const button = document.querySelector(".mobile-menu-button");
@@ -56,7 +75,7 @@ function initializeHomepagePaneTransition() {
     }, 820);
 
     window.setTimeout(() => {
-      window.location.href = destination;
+      window.location.href = destination + "?arrival=about";
     }, 2380);
   });
 }
