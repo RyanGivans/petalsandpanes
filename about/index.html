@@ -1,6 +1,6 @@
 <!-- ===== PART 1 START: ABOUT PAGE ===== -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,46 +24,95 @@
   <div data-shared-nav></div>
 
   <main>
-    <section class="about-window-hero">
+    <!-- ===== ABOUT HERO START: LOOKING INTO THE GLASSHOUSE ===== -->
+    <section class="about-glasshouse-view">
       <img
-        class="about-window-hero__image"
-        src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=2200&q=88"
-        alt="Vintage garden glasshouse interior filled with greenery"
+        class="about-glasshouse-view__interior"
+        src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=2400&q=90"
+        alt="Lush garden glasshouse interior filled with plants and flowers"
       />
 
-      <div class="about-window-hero__overlay"></div>
+      <div class="about-glasshouse-view__shade"></div>
+      <div class="about-glasshouse-view__mist"></div>
 
-      <div class="about-window-frame about-window-frame--outer"></div>
-      <div class="about-window-frame about-window-frame--left"></div>
-      <div class="about-window-frame about-window-frame--right"></div>
-      <div class="about-window-frame about-window-frame--top"></div>
+      <div class="about-glasshouse-view__foliage about-glasshouse-view__foliage--left"></div>
+      <div class="about-glasshouse-view__foliage about-glasshouse-view__foliage--right"></div>
 
-      <div class="about-window-hero__content">
-        <p class="section-eyebrow">The story behind the doors</p>
+      <div class="about-glasshouse-frame">
+        <div class="about-glasshouse-frame__vertical about-glasshouse-frame__vertical--left"></div>
+        <div class="about-glasshouse-frame__vertical about-glasshouse-frame__vertical--center"></div>
+        <div class="about-glasshouse-frame__vertical about-glasshouse-frame__vertical--right"></div>
+
+        <div class="about-glasshouse-frame__horizontal about-glasshouse-frame__horizontal--top"></div>
+        <div class="about-glasshouse-frame__horizontal about-glasshouse-frame__horizontal--middle"></div>
+      </div>
+
+      <div class="about-glasshouse-view__content">
+        <p class="section-eyebrow">Inside Petals &amp; Panes</p>
 
         <h1>
-          A little piece of Huntsville history,
-          given a new place to bloom.
+          Every pane holds
+          <span>a little history.</span>
         </h1>
 
         <p>
-          Petals &amp; Panes was created to be more than a beautiful backdrop.
-          It is a place for connection, storytelling, and preserving the kind
-          of memories that deserve to be kept.
+          A vintage garden glasshouse created for storytelling, connection,
+          and photographs filled with natural light.
         </p>
 
-        <a class="btn btn--light" href="#the-doors">
-          Step Inside the Story
+        <a class="btn btn--light" href="#door-story">
+          Discover the Story
         </a>
       </div>
 
-      <div class="about-window-hero__note">
-        <span>Vintage French doors</span>
-        <strong>Originally from Bessie’s Inn</strong>
+      <div class="about-memory-table">
+        <div class="about-memory-table__surface"></div>
+
+        <figure class="about-memory-table__photo">
+          <img
+            src="/petalsandpanes/gallery/bessies-inn.png"
+            alt="Historic Bessie's Inn in Huntsville, Arkansas"
+          />
+
+          <figcaption>
+            Bessie’s Inn<br />
+            <span>Huntsville, Arkansas</span>
+          </figcaption>
+        </figure>
+
+        <article class="about-memory-table__note">
+          <p class="about-memory-table__label">The story behind the doors</p>
+
+          <h2>
+            A piece of Huntsville history found a new home.
+          </h2>
+
+          <p>
+            The vintage French doors inside Petals &amp; Panes originally came
+            from Bessie’s Inn, where they had been part of the building since the
+            early 1900s.
+          </p>
+
+          <a href="#door-story">Read the full story</a>
+        </article>
+
+        <div class="about-memory-table__flowers" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="about-glasshouse-view__scroll">
+        <span></span>
+        Scroll to step inside
       </div>
     </section>
+    <!-- ===== ABOUT HERO END ===== -->
 
-    <section class="section about-intro" id="the-doors">
+    <section class="section about-intro" id="door-story">
       <div class="split-layout">
         <div>
           <p class="section-eyebrow">A second life for something beautiful</p>
@@ -96,12 +145,12 @@
 
         <figure class="about-story-image">
           <img
-            src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1300&q=88"
-            alt="Vintage white French doors opening into a garden"
+            src="/petalsandpanes/gallery/bessies-inn.png"
+            alt="Historic Bessie's Inn in Huntsville, Arkansas"
           />
 
           <figcaption>
-            <span>Replace this image with a close-up of the actual doors</span>
+            <span>Bessie’s Inn — Huntsville, Arkansas</span>
           </figcaption>
         </figure>
       </div>
