@@ -34,12 +34,30 @@ function initializeHomepagePaneTransition() {
 
     stage.style.setProperty("--zoom-x", "35.4%");
     stage.style.setProperty("--zoom-y", "59.2%");
+
+    const reveal = document.createElement("div");
+    reveal.className = "home-pane-reveal home-pane-reveal--about";
+    reveal.innerHTML = `
+      <img
+        class="home-pane-reveal__image"
+        src="/petalsandpanes/gallery/about-hero.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="home-pane-reveal__veil"></div>
+    `;
+
+    stage.appendChild(reveal);
     stage.classList.add("is-zooming-through-pane", "is-zooming-to-about");
     document.body.classList.add("is-home-transitioning");
 
+    requestAnimationFrame(() => {
+      reveal.classList.add("is-visible");
+    });
+
     window.setTimeout(() => {
       window.location.href = destination;
-    }, 860);
+    }, 1220);
   });
 }
 
