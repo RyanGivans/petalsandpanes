@@ -984,3 +984,73 @@ button, input, textarea, select { font: inherit; }
 }
 
 /* ===== ABOUT PAGE: LOOKING THROUGH THE GLASS END ===== */
+
+
+/* ===== CINEMATIC ABOUT PHOTO SECTION ===== */
+
+.about-purpose-cinematic{
+  position:relative;
+  min-height:90vh;
+  overflow:hidden;
+}
+
+.about-purpose-cinematic__image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about-purpose-cinematic__overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15,22,16,.82),
+      rgba(15,22,16,.45) 40%,
+      rgba(15,22,16,.18) 100%
+    );
+}
+
+.about-purpose-cinematic__card{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+  padding:120px 8vw;
+  color:white;
+}
+
+.about-purpose-cinematic__card h2{
+  font-family:var(--serif);
+  font-size:clamp(3rem,5vw,5.5rem);
+  line-height:.9;
+  margin:0 0 24px;
+}
+
+.about-purpose-cinematic__card p{
+  max-width:620px;
+  font-size:1.1rem;
+  line-height:1.8;
+  color:rgba(255,255,255,.85);
+}
+
+.about-purpose-cinematic .btn{
+  margin-top:24px;
+}
+
+@media(max-width:768px){
+
+  .about-purpose-cinematic{
+    min-height:70vh;
+  }
+
+  .about-purpose-cinematic__card{
+    padding:80px 24px;
+  }
+
+  .about-purpose-cinematic__card h2{
+    font-size:3rem;
+  }
+}
