@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeMobileHomepageMenu();
+  initializeHomepagePaneTransition();
   initializeSharedComponents();
 });
 
@@ -15,6 +16,30 @@ function initializeMobileHomepageMenu() {
     const isOpen = menu.classList.toggle("is-open");
     button.setAttribute("aria-expanded", String(isOpen));
     button.textContent = isOpen ? "Close Menu" : "Explore the Glasshouse";
+  });
+}
+
+function initializeHomepagePaneTransition() {
+  const stage = document.querySelector(".home-stage");
+  const aboutPane = document.querySelector(".pane-link--about");
+
+  if (!stage || !aboutPane) return;
+
+  aboutPane.addEventListener("click", (event) => {
+    const destination = aboutPane.getAttribute("href");
+
+    if (!destination || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    event.preventDefault();
+
+    stage.style.setProperty("--zoom-x", "35.4%");
+    stage.style.setProperty("--zoom-y", "59.2%");
+    stage.classList.add("is-zooming-through-pane", "is-zooming-to-about");
+    document.body.classList.add("is-home-transitioning");
+
+    window.setTimeout(() => {
+      window.location.href = destination;
+    }, 860);
   });
 }
 
