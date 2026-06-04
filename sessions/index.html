@@ -20,67 +20,72 @@
   <link rel="stylesheet" href="/petalsandpanes/css/base.css" />
   <link rel="stylesheet" href="/petalsandpanes/css/shared-pages.css" />
   <link rel="stylesheet" href="/petalsandpanes/css/sessions.css" />
+
+  <style>
+    body{margin:0;background:#f7f2e8;color:#1f241f;font-family:"Montserrat",Arial,sans-serif}
+    .space-hero{position:relative;min-height:92svh;overflow:hidden;background:#243025}
+    .space-hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.025)}
+    .space-hero__overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,27,20,.78),rgba(17,27,20,.38) 44%,rgba(17,27,20,.08) 76%),linear-gradient(180deg,rgba(10,16,12,.08),rgba(10,16,12,.28))}
+    .space-hero__content{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:0 auto;padding:17vh 0 90px;color:#fffaf1}
+    .space-hero__content h1{max-width:760px;margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(4.8rem,8.2vw,8.6rem);line-height:.84;letter-spacing:-.07em}
+    .space-hero__content h1 span{display:block;color:#e0c99a;font-style:italic}
+    .space-hero__content p{max-width:650px;margin:22px 0 30px;color:rgba(255,255,255,.88);font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.32rem,2vw,1.72rem);line-height:1.22}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;text-decoration:none;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .btn--light{color:#122018;background:#fffaf1;border:1px solid rgba(255,255,255,.42)}
+    .space-intro{padding:104px 20px 118px;background:linear-gradient(180deg,#f7f2e8,#efe7d7)}
+    .space-intro__inner{display:grid;width:min(1180px,100%);margin:0 auto;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:58px;align-items:center}
+    .space-copy h2,.space-feature-copy h2,.space-possibilities__head h2,.space-final__panel h2{margin:0;font-family:"Cormorant Garamond",Georgia,serif;letter-spacing:-.055em}
+    .space-copy h2{font-size:clamp(3.8rem,6vw,6.2rem);line-height:.9}
+    .space-copy p,.space-feature-copy p,.space-possibilities__head p,.space-final__panel p{line-height:1.8}
+    .space-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:26px}
+    .space-benefit{padding:16px 18px;background:rgba(255,255,255,.56);border:1px solid rgba(93,111,90,.14);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .space-intro__image{min-height:560px;overflow:hidden;border:12px solid rgba(255,252,245,.88);box-shadow:0 20px 60px rgba(15,25,18,.28)}
+    .space-intro__image img{width:100%;height:100%;object-fit:cover}
+    .space-feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);min-height:620px;background:#1f2e23}
+    .space-feature--reverse{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);background:#efe7d7}
+    .space-feature__image img{width:100%;height:100%;object-fit:cover}
+    .space-feature-copy{display:flex;flex-direction:column;justify-content:center;padding:72px 7vw;color:#fffaf1}
+    .space-feature--reverse .space-feature-copy{color:#1f241f}
+    .space-feature-copy h2{font-size:clamp(3.3rem,5vw,5.4rem);line-height:.9}
+    .space-detail-grid{display:grid;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:116px 0;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:110px;gap:14px}
+    .space-detail-card{position:relative;overflow:hidden;min-height:100%}
+    .space-detail-card img{width:100%;height:100%;object-fit:cover}
+    .space-detail-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(17,28,20,.7))}
+    .space-detail-card figcaption{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fffaf1}
+    .space-detail-card strong{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;line-height:.95}
+    .space-detail-card span{display:block;margin-top:5px;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .space-detail-card:nth-child(1){grid-column:span 7;grid-row:span 4}.space-detail-card:nth-child(2){grid-column:span 5;grid-row:span 2}.space-detail-card:nth-child(3){grid-column:span 5;grid-row:span 2}.space-detail-card:nth-child(4){grid-column:span 4;grid-row:span 3}.space-detail-card:nth-child(5){grid-column:span 4;grid-row:span 3}.space-detail-card:nth-child(6){grid-column:span 4;grid-row:span 3}
+    .space-possibilities{padding:114px 20px 126px;background:linear-gradient(180deg,#ece5d6,#f8f4eb)}
+    .space-possibilities__inner{width:min(1180px,100%);margin:0 auto}.space-possibilities__head{max-width:760px;margin-bottom:32px}.space-possibilities__head h2{font-size:clamp(3.8rem,6vw,6.2rem);line-height:.9}
+    .space-theme-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.space-theme{padding:22px;background:rgba(255,255,255,.56);border:1px solid rgba(86,104,84,.14)}.space-theme h3{margin:0;color:#344333;font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem}.space-theme p{margin:10px 0 0;line-height:1.65}
+    .space-final{position:relative;min-height:74vh;overflow:hidden}.space-final__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.space-final__overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,31,23,.82),rgba(20,31,23,.4) 46%,rgba(20,31,23,.18))}.space-final__panel{position:relative;z-index:2;width:min(720px,calc(100% - 48px));margin-left:7vw;padding:108px 0 96px;color:#fffaf1}.space-final__panel h2{font-size:clamp(3.8rem,6vw,6.2rem);line-height:.88}.space-final__actions{display:flex;gap:12px;margin-top:28px}
+    @media(max-width:980px){.space-intro__inner,.space-feature,.space-feature--reverse{grid-template-columns:1fr}.space-theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:720px){.space-hero{min-height:80svh}.space-hero__content{width:min(100% - 30px,1180px);padding-top:130px}.space-hero__content h1{font-size:clamp(4rem,16vw,6rem)}.space-intro{padding:74px 14px 84px}.space-intro__image{min-height:400px}.space-feature-copy{padding:58px 22px}.space-detail-grid{width:min(100% - 24px,1180px);grid-template-columns:1fr;grid-auto-rows:260px;padding:82px 0}.space-detail-card:nth-child(n){grid-column:auto;grid-row:auto}.space-theme-grid{grid-template-columns:1fr}.space-final__panel{width:min(100% - 28px,720px);margin:0 auto;padding:86px 0 74px}.space-final__actions{flex-direction:column}}
+  </style>
 </head>
 
 <body class="site-page sessions-page">
   <div data-shared-nav></div>
 
   <main>
-    <!-- ===== HERO ===== -->
     <section class="space-hero">
-      <img
-        class="space-hero__image"
-        src="/petalsandpanes/gallery/arch.png"
-        alt="Flower-covered garden archway at Petals and Panes"
-      />
-
+      <img class="space-hero__image" src="/petalsandpanes/gallery/arch.png" alt="Flower-covered garden archway at Petals and Panes" />
       <div class="space-hero__overlay"></div>
-
       <div class="space-hero__content">
         <p class="section-eyebrow">The Space</p>
-
-        <h1>
-          A garden made
-          <span>for stories.</span>
-        </h1>
-
-        <p>
-          From the glasshouse doors to flower-covered garden corners, every
-          part of Petals &amp; Panes was designed to give photographers a setting
-          with warmth, texture, and character.
-        </p>
-
-        <a class="btn btn--light" href="#locations">
-          Explore the Locations
-        </a>
+        <h1>A garden made <span>for stories.</span></h1>
+        <p>From the glasshouse doors to flower-covered garden corners, every part of Petals &amp; Panes was designed to give photographers a setting with warmth, texture, and character.</p>
+        <a class="btn btn--light" href="#locations">Explore the Locations</a>
       </div>
-
-      <div class="space-hero__note">Scroll to wander through the garden</div>
     </section>
 
-    <!-- ===== INTRO ===== -->
     <section class="space-intro">
       <div class="space-intro__inner">
         <div class="space-copy">
           <p class="section-eyebrow">A photographer’s playground</p>
-
-          <h2>
-            One property.
-            Endless possibilities.
-          </h2>
-
-          <p>
-            Petals &amp; Panes is more than one backdrop. It is a collection of
-            thoughtfully styled spaces that can shift with the season, the
-            light, and the story you want to tell.
-          </p>
-
-          <p>
-            Use the glasshouse for timeless natural-light portraits, move into
-            the garden for softer editorial images, or build an entire gallery
-            around the vintage details tucked throughout the property.
-          </p>
-
+          <h2>One property. Endless possibilities.</h2>
+          <p>Petals &amp; Panes is more than one backdrop. It is a collection of thoughtfully styled spaces that can shift with the season, the light, and the story you want to tell.</p>
+          <p>Use the glasshouse for timeless natural-light portraits, move into the garden for softer editorial images, or build an entire gallery around the vintage details tucked throughout the property.</p>
           <div class="space-benefits">
             <div class="space-benefit">Natural light</div>
             <div class="space-benefit">Vintage details</div>
@@ -88,244 +93,60 @@
             <div class="space-benefit">Indoor + outdoor variety</div>
           </div>
         </div>
-
-        <figure class="space-intro__image">
-          <img
-            src="/petalsandpanes/gallery/glasshouse-hero.png"
-            alt="Petals and Panes vintage garden glasshouse exterior"
-          />
-        </figure>
+        <figure class="space-intro__image"><img src="/petalsandpanes/gallery/glasshouse-hero.png" alt="Petals and Panes vintage garden glasshouse exterior" /></figure>
       </div>
     </section>
 
-    <!-- ===== FEATURE: GLASSHOUSE ===== -->
     <section class="space-feature">
-      <div class="space-feature__image">
-        <img
-          src="/petalsandpanes/gallery/glasshouse-hero.png"
-          alt="Vintage glasshouse exterior at golden hour"
-        />
-      </div>
-
-      <div class="space-feature-copy">
-        <p class="section-eyebrow">The glasshouse</p>
-
-        <h2>
-          The heart of the property.
-        </h2>
-
-        <p>
-          Vintage panes, soft neutral tones, and natural light create a setting
-          that feels romantic without overpowering the people in front of the
-          camera.
-        </p>
-
-        <p>
-          It works beautifully for motherhood, maternity, family, branding,
-          seniors, and seasonal sessions.
-        </p>
-      </div>
+      <div class="space-feature__image"><img src="/petalsandpanes/gallery/glasshouse-hero.png" alt="Vintage glasshouse exterior at golden hour" /></div>
+      <div class="space-feature-copy"><p class="section-eyebrow">The glasshouse</p><h2>The heart of the property.</h2><p>Vintage panes, soft neutral tones, and natural light create a setting that feels romantic without overpowering the people in front of the camera.</p><p>It works beautifully for motherhood, maternity, family, branding, seniors, and seasonal sessions.</p></div>
     </section>
 
-    <!-- ===== FEATURE: GARDEN ARCH ===== -->
     <section class="space-feature space-feature--reverse">
-      <div class="space-feature-copy">
-        <p class="section-eyebrow">The garden arch</p>
-
-        <h2>
-          A frame inside the frame.
-        </h2>
-
-        <p>
-          Covered in vines and seasonal blooms, the garden arch gives portraits
-          an immediate sense of depth and place. It is one of the easiest spots
-          on the property to turn a simple pose into a finished image.
-        </p>
-      </div>
-
-      <div class="space-feature__image">
-        <img
-          src="/petalsandpanes/gallery/arch.png"
-          alt="Flower-covered wooden garden archway"
-        />
-      </div>
+      <div class="space-feature-copy"><p class="section-eyebrow">The garden arch</p><h2>A frame inside the frame.</h2><p>Covered in vines and seasonal blooms, the garden arch gives portraits an immediate sense of depth and place. It is one of the easiest spots on the property to turn a simple pose into a finished image.</p></div>
+      <div class="space-feature__image"><img src="/petalsandpanes/gallery/arch.png" alt="Flower-covered wooden garden archway" /></div>
     </section>
 
-    <!-- ===== FAVORITE PHOTO LOCATIONS ===== -->
     <section id="locations">
       <div class="space-detail-grid">
-        <figure class="space-detail-card">
-          <img src="/petalsandpanes/gallery/bike.png" alt="Vintage bicycle garden corner" />
-          <figcaption>
-            <strong>Vintage Bicycle Garden</strong>
-            <span>Styled corner with soft garden character</span>
-          </figcaption>
-        </figure>
-
-        <figure class="space-detail-card">
-          <img src="/petalsandpanes/gallery/bike-lady.png" alt="Portrait beside vintage bicycle garden corner" />
-          <figcaption>
-            <strong>From setup to portrait</strong>
-            <span>See how the detail becomes the final image</span>
-          </figcaption>
-        </figure>
-
-        <figure class="space-detail-card">
-          <img src="/petalsandpanes/gallery/flower-swing.png" alt="Floral swing hanging from a tree" />
-          <figcaption>
-            <strong>Flower Swing</strong>
-            <span>Romantic, soft, and naturally framed</span>
-          </figcaption>
-        </figure>
-
-        <figure class="space-detail-card">
-          <img src="/petalsandpanes/gallery/lady-swing.jpg" alt="Maternity portrait on flower swing" />
-          <figcaption>
-            <strong>Maternity on the swing</strong>
-            <span>Made for intimate milestone portraits</span>
-          </figcaption>
-        </figure>
-
-        <figure class="space-detail-card">
-          <img src="/petalsandpanes/gallery/potted-plants.png" alt="Potting wall and garden flowers" />
-          <figcaption>
-            <strong>Potting Wall</strong>
-            <span>Layered textures and garden detail</span>
-          </figcaption>
-        </figure>
-
-        <figure class="space-detail-card">
-          <img src="/petalsandpanes/gallery/sunflowers.png" alt="Sunflower garden surrounding a vintage glasshouse" />
-          <figcaption>
-            <strong>Seasonal Gardens</strong>
-            <span>Different stories as the garden changes</span>
-          </figcaption>
-        </figure>
+        <figure class="space-detail-card"><img src="/petalsandpanes/gallery/bike.png" alt="Vintage bicycle garden corner" /><figcaption><strong>Vintage Bicycle Garden</strong><span>Styled corner with soft garden character</span></figcaption></figure>
+        <figure class="space-detail-card"><img src="/petalsandpanes/gallery/bike-lady.png" alt="Portrait beside vintage bicycle garden corner" /><figcaption><strong>From setup to portrait</strong><span>See how the detail becomes the final image</span></figcaption></figure>
+        <figure class="space-detail-card"><img src="/petalsandpanes/gallery/flower-swing.png" alt="Floral swing hanging from a tree" /><figcaption><strong>Flower Swing</strong><span>Romantic, soft, and naturally framed</span></figcaption></figure>
+        <figure class="space-detail-card"><img src="/petalsandpanes/gallery/lady-swing.jpg" alt="Maternity portrait on flower swing" /><figcaption><strong>Maternity on the swing</strong><span>Made for intimate milestone portraits</span></figcaption></figure>
+        <figure class="space-detail-card"><img src="/petalsandpanes/gallery/potted-plants.png" alt="Potting wall and garden flowers" /><figcaption><strong>Potting Wall</strong><span>Layered textures and garden detail</span></figcaption></figure>
+        <figure class="space-detail-card"><img src="/petalsandpanes/gallery/sunflowers.png" alt="Sunflower garden surrounding a vintage glasshouse" /><figcaption><strong>Seasonal Gardens</strong><span>Different stories as the garden changes</span></figcaption></figure>
       </div>
     </section>
 
-    <!-- ===== FEATURE: REAL PORTRAIT ===== -->
     <section class="space-feature">
-      <div class="space-feature__image">
-        <img
-          src="/petalsandpanes/gallery/petalpane1.jpg"
-          alt="Portrait in the Petals and Panes garden arch"
-        />
-      </div>
-
-      <div class="space-feature-copy">
-        <p class="section-eyebrow">Photographs that feel like a place</p>
-
-        <h2>
-          Every corner gives you something different.
-        </h2>
-
-        <p>
-          A session can move from glass and greenery to vintage props, flowers,
-          and shaded garden paths without ever feeling like the same backdrop
-          repeated over and over.
-        </p>
-      </div>
+      <div class="space-feature__image"><img src="/petalsandpanes/gallery/petalpane1.jpg" alt="Portrait in the Petals and Panes garden arch" /></div>
+      <div class="space-feature-copy"><p class="section-eyebrow">Photographs that feel like a place</p><h2>Every corner gives you something different.</h2><p>A session can move from glass and greenery to vintage props, flowers, and shaded garden paths without ever feeling like the same backdrop repeated over and over.</p></div>
     </section>
 
-    <!-- ===== SESSION POSSIBILITIES ===== -->
     <section class="space-possibilities">
       <div class="space-possibilities__inner">
-        <header class="space-possibilities__head">
-          <p class="section-eyebrow">Session possibilities</p>
-
-          <h2>
-            Designed to fit more than one kind of story.
-          </h2>
-
-          <p>
-            The space is flexible enough for quiet lifestyle portraits,
-            seasonal sessions, creative branding shoots, and larger milestone
-            galleries.
-          </p>
-        </header>
-
+        <header class="space-possibilities__head"><p class="section-eyebrow">Session possibilities</p><h2>Designed to fit more than one kind of story.</h2><p>The space is flexible enough for quiet lifestyle portraits, seasonal sessions, creative branding shoots, and larger milestone galleries.</p></header>
         <div class="space-theme-grid">
-          <article class="space-theme">
-            <h3>Motherhood</h3>
-            <p>Soft, natural images built around connection, movement, and small moments.</p>
-          </article>
-
-          <article class="space-theme">
-            <h3>Maternity</h3>
-            <p>Romantic garden portraits with space for both editorial and intimate frames.</p>
-          </article>
-
-          <article class="space-theme">
-            <h3>Family</h3>
-            <p>Room to move, play, explore, and create a gallery that feels relaxed.</p>
-          </article>
-
-          <article class="space-theme">
-            <h3>Couples</h3>
-            <p>Warm garden corners, vintage details, and sunset light for meaningful portraits.</p>
-          </article>
-
-          <article class="space-theme">
-            <h3>Seniors</h3>
-            <p>Enough variety to create a full gallery without leaving the property.</p>
-          </article>
-
-          <article class="space-theme">
-            <h3>Branding</h3>
-            <p>A distinctive garden setting for makers, creatives, and small businesses.</p>
-          </article>
-
-          <article class="space-theme">
-            <h3>Mini Sessions</h3>
-            <p>Seasonal setups and multiple styled corners make event days easy to plan.</p>
-          </article>
-
-          <article class="space-theme">
-            <h3>Editorial</h3>
-            <p>A flexible visual playground for creative concepts and storytelling shoots.</p>
-          </article>
+          <article class="space-theme"><h3>Motherhood</h3><p>Soft, natural images built around connection, movement, and small moments.</p></article>
+          <article class="space-theme"><h3>Maternity</h3><p>Romantic garden portraits with space for both editorial and intimate frames.</p></article>
+          <article class="space-theme"><h3>Family</h3><p>Room to move, play, explore, and create a gallery that feels relaxed.</p></article>
+          <article class="space-theme"><h3>Couples</h3><p>Warm garden corners, vintage details, and sunset light for meaningful portraits.</p></article>
+          <article class="space-theme"><h3>Seniors</h3><p>Enough variety to create a full gallery without leaving the property.</p></article>
+          <article class="space-theme"><h3>Branding</h3><p>A distinctive garden setting for makers, creatives, and small businesses.</p></article>
+          <article class="space-theme"><h3>Mini Sessions</h3><p>Seasonal setups and multiple styled corners make event days easy to plan.</p></article>
+          <article class="space-theme"><h3>Editorial</h3><p>A flexible visual playground for creative concepts and storytelling shoots.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- ===== FINAL CTA ===== -->
     <section class="space-final">
-      <img
-        class="space-final__image"
-        src="/petalsandpanes/gallery/sunflowers.png"
-        alt="Vintage garden glasshouse surrounded by sunflowers"
-      />
-
+      <img class="space-final__image" src="/petalsandpanes/gallery/sunflowers.png" alt="Vintage garden glasshouse surrounded by sunflowers" />
       <div class="space-final__overlay"></div>
-
-      <div class="space-final__panel">
-        <p class="section-eyebrow">Petals &amp; Panes</p>
-
-        <h2>
-          Bring your next session to life.
-        </h2>
-
-        <p>
-          Reserve the glasshouse and garden for your next portrait session,
-          seasonal setup, or creative project in Huntsville, Arkansas.
-        </p>
-
-        <div class="space-final__actions">
-          <a class="btn btn--light" href="/petalsandpanes/booking/">
-            Reserve the Glasshouse
-          </a>
-
-          <a class="btn btn--dark" href="/petalsandpanes/gallery/">
-            View the Gallery
-          </a>
-        </div>
-      </div>
+      <div class="space-final__panel"><p class="section-eyebrow">Petals &amp; Panes</p><h2>Bring your next session to life.</h2><p>Reserve the glasshouse and garden for your next portrait session, seasonal setup, or creative project in Huntsville, Arkansas.</p><div class="space-final__actions"><a class="btn btn--light" href="/petalsandpanes/booking/">Reserve the Glasshouse</a><a class="btn btn--light" href="/petalsandpanes/gallery/">View the Gallery</a></div></div>
     </section>
   </main>
 
   <div data-shared-footer></div>
-
   <script src="/petalsandpanes/app.js"></script>
 </body>
 </html>
