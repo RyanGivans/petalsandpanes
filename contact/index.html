@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Contact Petals and Panes to ask a question, plan a session, or reserve the vintage garden glasshouse in Huntsville, Arkansas."
+    content="Contact Petals and Panes to ask a question, plan a session, or request a session time at the vintage garden glasshouse in Huntsville, Arkansas."
   />
   <title>Contact | Petals &amp; Panes</title>
 
@@ -45,9 +45,9 @@
         </h1>
 
         <p>
-          Ask a question, check availability, or start planning a portrait
-          session, seasonal setup, or creative project in the glasshouse and
-          garden.
+          Ask a question, check availability, or request a session time for a
+          portrait session, seasonal setup, or creative project in the
+          glasshouse and garden.
         </p>
       </div>
     </section>
@@ -70,28 +70,30 @@
 
           <p>
             Send a detailed inquiry through the form, start a quick Facebook
-            Messenger conversation, or reach out by email. Use whichever option
-            feels easiest for you.
+            Messenger conversation, or connect with us on Instagram. Use
+            whichever option feels easiest for you.
           </p>
 
           <div class="contact-details">
             <article class="contact-detail">
-              <span>Facebook Messenger</span>
+              <span>Facebook</span>
               <a
-                href="https://m.me/61586174127701"
+                href="https://facebook.com/petalsandpanes.nwa"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Message Petals &amp; Panes
+                Petals &amp; Panes on Facebook
               </a>
             </article>
 
             <article class="contact-detail">
-              <span>Email</span>
+              <span>Instagram</span>
               <a
-                href="mailto:hello@petalsandpanes.com?subject=Petals%20%26%20Panes%20Inquiry"
+                href="https://instagram.com/petalsandpanes.nwa"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                hello@petalsandpanes.com
+                @petalsandpanes.nwa
               </a>
             </article>
 
@@ -102,7 +104,7 @@
           </div>
         </div>
 
-        <div class="contact-form-card">
+        <div class="contact-form-card" id="inquiry-form">
           <p class="section-eyebrow">Inquiry form</p>
 
           <h2>
@@ -110,11 +112,15 @@
           </h2>
 
           <p>
-            Share a few details below. When you click send, your email app will
-            open with the inquiry prepared for you.
+            Share a few details below. We will be in touch to confirm official
+            booking details. Sessions are confirmed once payment is received and
+            the location waiver form has been signed.
           </p>
 
-          <form id="contact-inquiry-form">
+          <form action="https://formspree.io/f/xaqzozzl" method="POST">
+            <input type="hidden" name="_subject" value="New Petals &amp; Panes Inquiry" />
+            <input type="hidden" name="_next" value="https://ryangivans.github.io/petalsandpanes/contact/?submitted=true" />
+
             <div class="contact-form-grid">
               <div class="contact-field">
                 <label for="contact-name">Your Name</label>
@@ -134,13 +140,14 @@
               <div class="contact-field">
                 <label for="contact-type">What are you planning?</label>
                 <select id="contact-type" name="type">
-                  <option value="Portrait Session">Portrait Session</option>
-                  <option value="Family Session">Family Session</option>
-                  <option value="Senior Session">Senior Session</option>
-                  <option value="Couples Session">Couples Session</option>
-                  <option value="Branding Session">Branding Session</option>
-                  <option value="Mini Sessions">Mini Sessions</option>
-                  <option value="Creative Project">Creative Project</option>
+                  <option value="Couples & Engagements">Couples &amp; Engagements</option>
+                  <option value="Maternity">Maternity</option>
+                  <option value="Children & Milestones">Children &amp; Milestones</option>
+                  <option value="Family">Family</option>
+                  <option value="Seniors & Graduates">Seniors &amp; Graduates</option>
+                  <option value="Seasonal & Holiday Sessions">Seasonal &amp; Holiday Sessions</option>
+                  <option value="Styled Shoots & Editorial">Styled Shoots &amp; Editorial</option>
+                  <option value="Commercial / Multi-Session">Commercial / Multi-Session</option>
                   <option value="General Question">General Question</option>
                 </select>
               </div>
@@ -163,23 +170,23 @@
 
             <div class="contact-form-actions">
               <button class="btn btn--dark" type="submit">
-                Send Inquiry by Email
+                Request a Session Time
               </button>
 
               <a
                 class="btn btn--light"
-                href="https://m.me/61586174127701"
+                href="https://facebook.com/petalsandpanes.nwa"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Message on Facebook
+                Visit Facebook
               </a>
             </div>
 
             <p class="contact-note">
-              The form opens your email app so you can review the message before
-              sending it. You can also message us directly on Facebook for a
-              quicker conversation.
+              Submitting the form sends your inquiry directly to Petals &amp;
+              Panes. We will follow up to confirm availability, payment, and the
+              location waiver.
             </p>
           </form>
         </div>
@@ -208,7 +215,7 @@
           </p>
 
           <a class="btn btn--dark" href="/petalsandpanes/booking/">
-            View Booking Details
+            View Pricing Guide
           </a>
         </div>
 
@@ -244,20 +251,17 @@
         </p>
 
         <div class="contact-final__actions">
-          <a
-            class="btn btn--light"
-            href="https://m.me/61586174127701"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Message on Facebook
+          <a class="btn btn--light" href="#inquiry-form">
+            Request a Session Time
           </a>
 
           <a
             class="btn btn--dark"
-            href="mailto:hello@petalsandpanes.com?subject=Petals%20%26%20Panes%20Inquiry"
+            href="https://instagram.com/petalsandpanes.nwa"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Send an Email
+            Visit Instagram
           </a>
         </div>
       </div>
@@ -267,36 +271,6 @@
   <div data-shared-footer></div>
 
   <script src="/petalsandpanes/app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contact-inquiry-form");
-
-      if (!form) return;
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const name = document.getElementById("contact-name").value.trim();
-        const email = document.getElementById("contact-email").value.trim();
-        const phone = document.getElementById("contact-phone").value.trim();
-        const type = document.getElementById("contact-type").value;
-        const date = document.getElementById("contact-date").value.trim();
-        const message = document.getElementById("contact-message").value.trim();
-
-        const subject = encodeURIComponent("Petals & Panes Inquiry - " + type);
-        const body = encodeURIComponent(
-          "Name: " + name + "\n" +
-          "Email: " + email + "\n" +
-          "Phone: " + (phone || "Not provided") + "\n" +
-          "Inquiry Type: " + type + "\n" +
-          "Preferred Date or Timeframe: " + (date || "Not provided") + "\n\n" +
-          "Message:\n" + message
-        );
-
-        window.location.href = "mailto:hello@petalsandpanes.com?subject=" + subject + "&body=" + body;
-      });
-    });
-  </script>
 </body>
 </html>
 <!-- ===== PART 1 END ===== -->
