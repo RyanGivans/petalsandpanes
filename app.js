@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initializeArrivalHandoff();
   initializeMobileHomepageMenu();
-  initializeHomepagePaneTransition();
+  initializeHomepagePaneTransitions();
   initializeSharedComponents();
 });
 
@@ -11,12 +11,12 @@ function initializeArrivalHandoff() {
   const params = new URLSearchParams(window.location.search);
   const arrival = params.get("arrival");
 
-  if (arrival !== "about") return;
+  if (!arrival) return;
 
-  document.body.classList.add("is-about-arriving");
+  document.body.classList.add(`is-${arrival}-arriving`);
 
   window.setTimeout(() => {
-    document.body.classList.add("is-about-arrival-ready");
+    document.body.classList.add(`is-${arrival}-arrival-ready`);
   }, 120);
 
   window.setTimeout(() => {
@@ -38,45 +38,51 @@ function initializeMobileHomepageMenu() {
   });
 }
 
-function initializeHomepagePaneTransition() {
+function initializeHomepagePaneTransitions() {
   const stage = document.querySelector(".home-stage");
-  const aboutPane = document.querySelector(".pane-link--about");
+  const paneLinks = document.querySelectorAll(".pane-link[data-transition]");
 
-  if (!stage || !aboutPane) return;
+  if (!stage || !paneLinks.length) return;
 
-  aboutPane.addEventListener("click", (event) => {
-    const destination = aboutPane.getAttribute("href");
+  paneLinks.forEach((paneLink) => {
+    paneLink.addEventListener("click", (event) => {
+      const destination = paneLink.getAttribute("href");
+      const transition = paneLink.dataset.transition || "page";
+      const revealImage = paneLink.dataset.revealImage || "/petalsandpanes/gallery/about-hero.png";
+      const zoomX = paneLink.dataset.zoomX || "50%";
+      const zoomY = paneLink.dataset.zoomY || "50%";
 
-    if (!destination || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (!destination || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
-    event.preventDefault();
+      event.preventDefault();
 
-    stage.style.setProperty("--zoom-x", "35.4%");
-    stage.style.setProperty("--zoom-y", "59.2%");
+      stage.style.setProperty("--zoom-x", zoomX);
+      stage.style.setProperty("--zoom-y", zoomY);
 
-    const reveal = document.createElement("div");
-    reveal.className = "home-pane-reveal home-pane-reveal--about";
-    reveal.innerHTML = `
-      <img
-        class="home-pane-reveal__image"
-        src="/petalsandpanes/gallery/about-hero.png"
-        alt=""
-        aria-hidden="true"
-      />
-      <div class="home-pane-reveal__veil"></div>
-    `;
+      const reveal = document.createElement("div");
+      reveal.className = `home-pane-reveal home-pane-reveal--${transition}`;
+      reveal.innerHTML = `
+        <img
+          class="home-pane-reveal__image"
+          src="${revealImage}"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="home-pane-reveal__veil"></div>
+      `;
 
-    stage.appendChild(reveal);
-    stage.classList.add("is-zooming-through-pane", "is-zooming-to-about");
-    document.body.classList.add("is-home-transitioning");
+      stage.appendChild(reveal);
+      stage.classList.add("is-zooming-through-pane", `is-zooming-to-${transition}`);
+      document.body.classList.add("is-home-transitioning");
 
-    window.setTimeout(() => {
-      reveal.classList.add("is-visible");
-    }, 820);
+      window.setTimeout(() => {
+        reveal.classList.add("is-visible");
+      }, 820);
 
-    window.setTimeout(() => {
-      window.location.href = destination + "?arrival=about";
-    }, 2380);
+      window.setTimeout(() => {
+        window.location.href = `${destination}?arrival=${encodeURIComponent(transition)}`;
+      }, 2380);
+    });
   });
 }
 
