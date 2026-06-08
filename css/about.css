@@ -160,6 +160,10 @@
   background: #f7f2e8;
 }
 
+.about-story-stage--alternate {
+  background: #efe7d7;
+}
+
 .about-story-stage::before,
 .about-story-stage::after {
   content: "";
