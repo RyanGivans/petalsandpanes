@@ -41,13 +41,19 @@
       var slides = Array.from(slider.querySelectorAll('.gallery-slide'));
       var count = slider.querySelector('[data-gallery-count]');
       var current = 0;
+      var timer;
       function show(index){
         current = (index + slides.length) % slides.length;
         slides.forEach(function(slide, i){ slide.classList.toggle('is-active', i === current); });
         if(count){ count.textContent = (current + 1) + ' / ' + slides.length; }
       }
-      slider.querySelector('[data-gallery-prev]').addEventListener('click', function(){ show(current - 1); });
-      slider.querySelector('[data-gallery-next]').addEventListener('click', function(){ show(current + 1); });
+      function start(){ timer = window.setInterval(function(){ show(current + 1); }, 4500); }
+      function restart(){ window.clearInterval(timer); start(); }
+      slider.querySelector('[data-gallery-prev]').addEventListener('click', function(){ show(current - 1); restart(); });
+      slider.querySelector('[data-gallery-next]').addEventListener('click', function(){ show(current + 1); restart(); });
+      slider.addEventListener('mouseenter', function(){ window.clearInterval(timer); });
+      slider.addEventListener('mouseleave', start);
+      start();
     });
   </script>
 </body>
